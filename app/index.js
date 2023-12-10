@@ -10,6 +10,7 @@ import { View, ScrollView, SafeAreaView } from "react-native";
 import { colors, font, sizes } from "../constants/styles";
 import Welcome from "../components/Welcome";
 import Popular from "../components/Popular";
+import CalendarDiv from "../components/Calender";
 
 const Home = () => {
     const [fontsLoaded] = useFonts({
@@ -33,12 +34,14 @@ const Home = () => {
                 }}
             />
 
-            <ScrollView showsVerticalScrollIndicator={false}>
+            {/* <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{ flex: 1, padding: sizes.medium }}>
                     <Welcome />
                     <Popular />
                 </View>
-            </ScrollView>
+            </ScrollView> */}
+
+            <CalendarDiv />
         </SafeAreaView>
     );
 };
