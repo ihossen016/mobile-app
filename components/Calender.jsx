@@ -53,7 +53,7 @@ async function createCalendar() {
 
 let eventDetails = {
     title: "Meeting",
-    startDate: new Date(Date.now() + 660 * 1000),
+    startDate: new Date(Date.now() + 605 * 1000),
     endDate: new Date(Date.now() + 3600 * 1000),
     timeZone: "Asia/Dhaka",
     alarms: [
