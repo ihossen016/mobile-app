@@ -34,6 +34,7 @@ import {
     TouchableOpacity,
     TextInput,
     FlatList,
+    Button,
 } from "react-native";
 
 import { colors, font, sizes } from "../constants/styles";
@@ -48,6 +49,7 @@ const all = require("../assets/new/all.png");
 const general = require("../assets/new/general.png");
 const cardiology = require("../assets/new/cardiology.png");
 const medicine = require("../assets/new/medicine.png");
+const doctor = require("../assets/new/doctor.png");
 
 const categories = [
     { img: all, text: "All" },
@@ -252,6 +254,158 @@ const Home = () => {
                         contentContainerStyle={{ columnGap: sizes.large }}
                         horizontal
                     />
+                </View>
+
+                <View style={{ flex: 1, gap: 20, padding: sizes.large }}>
+                    <TouchableOpacity onPress={() => {}}>
+                        <View
+                            style={{
+                                padding: sizes.large,
+                                borderWidth: 2,
+                                borderRadius: 16,
+                                borderColor: "#edf0f0",
+                                flex: 1,
+                                flexDirection: "row",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                                gap: 20,
+                            }}
+                        >
+                            <Image source={doctor} resizeMode="contain" />
+                            <View style={{ flex: 1 }}>
+                                <Text
+                                    style={{
+                                        fontFamily: "Poppins_500Medium",
+                                        fontSize: 18,
+                                        color: "#263257",
+                                    }}
+                                >
+                                    Dr. Maria Waston
+                                </Text>
+                                <Text
+                                    style={{
+                                        fontFamily: "Poppins_500Medium",
+                                        fontSize: 12,
+                                        color: "#7D8BB7",
+                                    }}
+                                >
+                                    Heart Surgeon, London, England
+                                </Text>
+
+                                <Text
+                                    style={{
+                                        padding: sizes.small,
+                                        marginTop: 10,
+                                        backgroundColor: "#f2f2f2",
+                                        color: "#222E54",
+                                        maxWidth: "50%",
+                                    }}
+                                >
+                                    Appointment
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => {}}>
+                        <View
+                            style={{
+                                padding: sizes.large,
+                                borderWidth: 2,
+                                borderRadius: 16,
+                                borderColor: "#edf0f0",
+                                flex: 1,
+                                flexDirection: "row",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                                gap: 20,
+                            }}
+                        >
+                            <Image source={doctor} resizeMode="contain" />
+                            <View style={{ flex: 1 }}>
+                                <Text
+                                    style={{
+                                        fontFamily: "Poppins_500Medium",
+                                        fontSize: 18,
+                                        color: "#263257",
+                                    }}
+                                >
+                                    Dr. Maria Waston
+                                </Text>
+                                <Text
+                                    style={{
+                                        fontFamily: "Poppins_500Medium",
+                                        fontSize: 12,
+                                        color: "#7D8BB7",
+                                    }}
+                                >
+                                    Heart Surgeon, London, England
+                                </Text>
+
+                                <Text
+                                    style={{
+                                        padding: sizes.small,
+                                        marginTop: 10,
+                                        backgroundColor: "#f2f2f2",
+                                        color: "#222E54",
+                                        maxWidth: "50%",
+                                    }}
+                                >
+                                    Appointment
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => {}}>
+                        <View
+                            style={{
+                                padding: sizes.large,
+                                borderWidth: 2,
+                                borderRadius: 16,
+                                borderColor: "#edf0f0",
+                                flex: 1,
+                                flexDirection: "row",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                                gap: 20,
+                            }}
+                        >
+                            <Image source={doctor} resizeMode="contain" />
+                            <View style={{ flex: 1 }}>
+                                <Text
+                                    style={{
+                                        fontFamily: "Poppins_500Medium",
+                                        fontSize: 18,
+                                        color: "#263257",
+                                    }}
+                                >
+                                    Dr. Maria Waston
+                                </Text>
+                                <Text
+                                    style={{
+                                        fontFamily: "Poppins_500Medium",
+                                        fontSize: 12,
+                                        color: "#7D8BB7",
+                                    }}
+                                >
+                                    Heart Surgeon, London, England
+                                </Text>
+
+                                <Text
+                                    style={{
+                                        padding: sizes.small,
+                                        marginTop: 10,
+                                        backgroundColor: "#f2f2f2",
+                                        color: "#222E54",
+                                        maxWidth: "50%",
+                                    }}
+                                >
+                                    Appointment
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
                 </View>
             </ScrollView>
 
