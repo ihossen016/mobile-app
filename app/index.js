@@ -33,6 +33,7 @@ import {
     Image,
     TouchableOpacity,
     TextInput,
+    FlatList,
 } from "react-native";
 
 import { colors, font, sizes } from "../constants/styles";
@@ -43,6 +44,17 @@ import CalendarDiv from "../components/Calender";
 const userImg = require("../assets/new/user.jpg");
 const menuIcon = require("../assets/new/menu.png");
 const searchIcon = require("../assets/new/search.png");
+const all = require("../assets/new/all.png");
+const general = require("../assets/new/general.png");
+const cardiology = require("../assets/new/cardiology.png");
+const medicine = require("../assets/new/medicine.png");
+
+const categories = [
+    { img: all, text: "All" },
+    { img: cardiology, text: "Cardiology" },
+    { img: medicine, text: "Medicine" },
+    { img: general, text: "General" },
+];
 
 const Home = () => {
     const [fontsLoaded] = useFonts({
@@ -174,6 +186,72 @@ const Home = () => {
                             />
                         </View>
                     </View>
+                </View>
+
+                <View
+                    style={{
+                        padding: sizes.large,
+                    }}
+                >
+                    <Text
+                        style={{
+                            fontFamily: "Poppins_500Medium",
+                            fontSize: 20,
+                            color: "#232F55",
+                        }}
+                    >
+                        Categories
+                    </Text>
+                </View>
+
+                <View
+                    style={{
+                        width: "100%",
+                        // marginTop: sizes.small,
+                        padding: sizes.small,
+                    }}
+                >
+                    <FlatList
+                        data={categories}
+                        renderItem={({ item }) => (
+                            <TouchableOpacity
+                                style={{
+                                    flex: 1,
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    gap: 10,
+                                }}
+                                onPress={() => {}}
+                            >
+                                <View
+                                    style={{
+                                        padding: sizes.medium,
+                                        borderWidth: 2,
+                                        borderColor: "#edf0f0",
+                                        borderRadius: 20,
+                                    }}
+                                >
+                                    <Image
+                                        source={item.img}
+                                        resizeMode="contain"
+                                        style={{ height: 40 }}
+                                    />
+                                </View>
+                                <Text
+                                    style={{
+                                        textAlign: "center",
+                                        // paddingTop: 10,
+                                        color: "#7D8BB7",
+                                    }}
+                                >
+                                    {item.text}
+                                </Text>
+                            </TouchableOpacity>
+                        )}
+                        keyExtractor={(item) => item.text}
+                        contentContainerStyle={{ columnGap: sizes.large }}
+                        horizontal
+                    />
                 </View>
             </ScrollView>
 
