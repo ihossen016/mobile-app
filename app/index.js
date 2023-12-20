@@ -50,6 +50,10 @@ const general = require("../assets/new/general.png");
 const cardiology = require("../assets/new/cardiology.png");
 const medicine = require("../assets/new/medicine.png");
 const doctor = require("../assets/new/doctor.png");
+const home = require("../assets/new/home.png");
+const msg = require("../assets/new/msg.png");
+const plus = require("../assets/new/plus.png");
+const schedule = require("../assets/new/schedule.png");
 
 const categories = [
     { img: all, text: "All" },
@@ -409,6 +413,55 @@ const Home = () => {
                 </View>
             </ScrollView>
 
+            <View style={{ flex: 1 }}>
+                <View
+                    style={{
+                        position: "absolute",
+                        left: 0,
+                        right: 0,
+                        bottom: -10,
+                        margin: sizes.large,
+                        padding: sizes.large,
+                        backgroundColor: "#fff",
+                        shadowOffset: "0px 0.48px",
+                    }}
+                >
+                    <View
+                        style={{
+                            position: "relative",
+                            flex: 1,
+                            flexDirection: "row",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            gap: 20,
+                        }}
+                    >
+                        <TouchableOpacity>
+                            <Image source={home} resizeMode="contain" />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Image source={schedule} resizeMode="contain" />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Image source={msg} resizeMode="contain" />
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={{
+                                width: 50,
+                                height: 50,
+                                borderRadius: 100,
+                                margin: "auto",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                backgroundColor: "#B28CFF",
+                            }}
+                        >
+                            <Image source={plus} resizeMode="contain" />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
             {/* <CalendarDiv /> */}
         </SafeAreaView>
     );
