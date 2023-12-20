@@ -167,7 +167,7 @@ const Home = () => {
                             backgroundColor: "#fff",
                             borderRadius: 16,
                             marginTop: 35,
-                            marginBottom: 30,
+                            marginBottom: 10,
                         }}
                     >
                         <TouchableOpacity
