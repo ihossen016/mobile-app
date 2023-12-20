@@ -423,7 +423,7 @@ const Home = () => {
                         margin: sizes.large,
                         padding: sizes.large,
                         backgroundColor: "#fff",
-                        shadowOffset: "0px 0.48px",
+                        borderRadius: 22,
                     }}
                 >
                     <View
