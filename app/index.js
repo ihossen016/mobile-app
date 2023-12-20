@@ -166,7 +166,7 @@ const Home = () => {
                             paddingLeft: 25,
                             backgroundColor: "#fff",
                             borderRadius: 16,
-                            marginTop: 35,
+                            marginTop: 20,
                             marginBottom: 10,
                         }}
                     >
