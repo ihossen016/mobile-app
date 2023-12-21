@@ -22,7 +22,7 @@ function doctors() {
     // useEffect(() => {
     //     refetch();
     // }, []);
-    console.log(data);
+    // console.log(data);
 
     if (isLoading) {
         return <Text>Loading Doctors...</Text>;
