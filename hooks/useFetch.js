@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const useFetch = (url) => {
-    const [data, setData] = useState([]);
+const useFetch = (url, headers = {}) => {
+    const [data, setData] = useState({});
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -10,8 +10,8 @@ const useFetch = (url) => {
         setIsLoading(true);
 
         try {
-            const response = await axios.get(url);
-            setData(response.data);
+            const response = await axios.get(url, { headers: headers });
+            setData(response.data.data);
             setIsLoading(false);
         } catch (error) {
             setError(error);
@@ -20,6 +20,11 @@ const useFetch = (url) => {
             setIsLoading(false);
         }
     };
+
+    // axios.interceptors.request.use((request) => {
+    //     console.log("Starting Request", request);
+    //     return request;
+    // });
 
     useEffect(() => {
         fetchdata();

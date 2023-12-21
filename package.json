@@ -12,6 +12,7 @@
     "@expo-google-fonts/dm-sans": "^0.2.3",
     "@expo-google-fonts/poppins": "^0.2.3",
     "axios": "^1.6.2",
+    "base-64": "^1.0.0",
     "eas-cli": "^5.9.1",
     "expo": "^49.0.3",
     "expo-calendar": "~11.3.2",

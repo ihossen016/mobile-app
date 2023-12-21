@@ -24,7 +24,7 @@ import {
     Poppins_900Black_Italic,
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { Stack, router } from "expo-router";
 import {
     Text,
     View,
@@ -439,7 +439,9 @@ const Home = () => {
                         <TouchableOpacity>
                             <Image source={home} resizeMode="contain" />
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => router.push("/doctors")}
+                        >
                             <Image source={schedule} resizeMode="contain" />
                         </TouchableOpacity>
                         <TouchableOpacity>
